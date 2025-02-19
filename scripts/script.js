@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setInterval(avancarCarrossel, 3000);
-
     atualizarCarrossel();
 
     // Configuração do botão de WhatsApp
@@ -27,5 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const mensagem = encodeURIComponent("Olá, estou interessado no carrinho elétrico!");
             window.open(`https://wa.me/${numero}?text=${mensagem}`, "_blank");
         });
+    });
+
+    // Configuração do menu hamburguer
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
     });
 });
