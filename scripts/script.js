@@ -6,9 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const carrossel = document.querySelector(".carrossel");
     const imagens = ["public/images/img1.jpg", "public/images/img2.jpg", "public/images/img3.jpg"]; // Agora carregando imagens da pasta correta
 
+    imagens.forEach((src) => {
+        let img = new Image();
+        img.src = src;
+    });
+
     function atualizarCarrossel() {
-        carrossel.style.backgroundImage = `url(${imagens[index]})`;
-        carrossel.style.transition = "background-image 1s ease-in-out";
+        carrossel.style.transform = `translateX(-${index * 100}%)`;
+        carrossel.style.transition = "transform 1s ease-in-out";
     }
 
     function avancarCarrossel() {
