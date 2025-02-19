@@ -1,92 +1,111 @@
-/* Reset básico */
-body, h1, h2, h3, p, ul, li {
+/* Reset básico para remover margens e paddings padrão */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
     color: #333;
+    text-align: center;
 }
 
 header {
     background-color: #007bff;
     color: white;
-    padding: 15px;
-    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: none;
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 150px;
+    border-radius: 5px;
 }
 
-nav a {
-    text-decoration: none;
+nav ul.active {
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav ul li a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-#home, #produtos {
-    padding: 20px;
-    text-align: center;
+section {
+    padding: 40px 20px;
 }
 
 .carrossel {
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
     margin: 20px auto;
-    background-color: #ddd;
-    height: 200px; /* Placeholder para o carrossel */
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .produto {
-    display: inline-block;
     background: white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
 }
 
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 .botao-whatsapp {
-    display: block;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #25d366;
+    display: inline-block;
+    background-color: #25D366;
     color: white;
-    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .produto {
-        width: 100%;
-    }
-
-    .carrossel {
-        height: 150px;
-    }
+.botao-whatsapp:hover {
+    background-color: #1EBE5D;
 }
 
-@media (min-width: 1024px) {
-    .carrossel {
-        height: 300px;
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
     }
-}
