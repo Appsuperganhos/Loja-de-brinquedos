@@ -65,20 +65,18 @@ section {
     padding: 40px 20px;
 }
 
-/* Estilos do banner */
+/* Estilo para o novo banner */
 #banner {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 2560px; /* Largura máxima */
+    margin: 0 auto;
     overflow: hidden;
 }
 
-.banner-img {
+#banner img {
     width: 100%;
     height: auto;
-    max-width: 2560px;
-    object-fit: cover;
+    display: block;
 }
 
 .produtos-container {
