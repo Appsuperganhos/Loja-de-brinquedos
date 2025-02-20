@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>v12 kids</title>
+    <title>V12 Kids - Loja de Brinquedos</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="public/images/logo.png" alt="Logo v12 kids" class="logo">
-        </div>
-        <h1>v12 kids</h1>
+        <img src="public/images/logo.png" alt="Logo V12 Kids" class="logo">
+        <h1>V12 Kids - Uma Loja Profissional</h1>
         <nav>
             <button class="menu-toggle">☰</button>
             <ul>
@@ -23,13 +21,23 @@
     </header>
 
     <section id="home">
-        <h2>Bem-vindo à v12 kids!</h2>
+        <h2>Bem-vindo à V12 Kids!</h2>
         <p>Confira nossa coleção de carrinhos elétricos para crianças.</p>
     </section>
 
-    <!-- Novo espaço para o banner -->
+    <!-- Banner com controle manual e automático -->
     <section id="banner">
-        <img src="public/images/banner1.jpg" alt="Banner da v12 kids">
+        <div class="banner-container">
+            <button class="banner-btn prev">&#10094;</button>
+            <div class="banner-images">
+                <img src="public/images/banner1.jpg" alt="Promoção 1">
+                <img src="public/images/banner2.jpg" alt="Promoção 2">
+                <img src="public/images/banner3.jpg" alt="Promoção 3">
+                <img src="public/images/banner4.jpg" alt="Promoção 4">
+                <img src="public/images/banner5.jpg" alt="Promoção 5">
+            </div>
+            <button class="banner-btn next">&#10095;</button>
+        </div>
     </section>
 
     <section id="produtos">
@@ -37,7 +45,7 @@
     </section>
 
     <footer>
-        <p>© 2025 v12 kids. Todos os direitos reservados.</p>
+        <p>© 2025 V12 Kids. Todos os direitos reservados.</p>
     </footer>
 
     <script src="scripts/script.js"></script>
