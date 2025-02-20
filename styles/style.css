@@ -28,7 +28,7 @@ header {
 }
 
 .header-logo img {
-    width: 90px; /* Tamanho menor da logo */
+    width: 60px; /* Tamanho menor da logo */
     height: auto;
     object-fit: contain;
 }
