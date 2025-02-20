@@ -67,9 +67,9 @@ section {
 
 .carrossel {
     width: 100%;
-    max-width: 100%; /* Largura total da tela */
+    max-width: 100%;
     margin: 20px auto;
-    overflow: hidden; /* Esconde as imagens fora da área visível */
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 400px; /* Ajuste a altura do carrossel conforme necessário */
@@ -80,9 +80,9 @@ section {
 }
 
 .carrossel img {
-    width: 100%;
+    width: 100%; /* Cada imagem ocupará 100% da largura da tela */
     height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+    object-fit: cover;
     flex-shrink: 0; /* Impede que as imagens encolham */
 }
 
