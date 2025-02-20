@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const totalImagens = imagens.length;
         index = (index + 1) % totalImagens;
         carrossel.style.transform = `translateX(-${index * 100}%)`; // Move o carrossel para a esquerda
-        carrossel.style.transition = "transform 1s ease-in-out"; // Transição suave
     }
 
     // Atualiza a cada 3 segundos
