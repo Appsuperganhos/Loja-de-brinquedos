@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const carrossel = document.querySelector(".carrossel");
     const imagens = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]; // Caminho das imagens
 
+    // Ajusta a largura do carrossel com base na quantidade de imagens
+    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
+
     imagens.forEach((src) => {
         let img = document.createElement("img");
         img.src = src;
         img.alt = "Imagem do carrossel";
-        img.style.width = "100%";
-        img.style.height = "100%";
-        img.style.objectFit = "cover";
-        img.style.flexShrink = "0"; // Evitar que a imagem encolha
+        img.style.width = "100%"; // A imagem vai ter 100% da largura da tela
+        img.style.height = "100vh"; // A altura será 100% da altura da tela
+        img.style.objectFit = "cover"; // Garante que a imagem se ajuste bem
+        img.style.flexShrink = "0"; // Impede que as imagens encolham
         carrossel.appendChild(img);
     });
 
@@ -21,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function atualizarCarrossel() {
         const totalImagens = imagens.length;
         index = (index + 1) % totalImagens;
-        carrossel.style.transform = `translateX(-${index * 100}%)`; // Mover as imagens para a esquerda
-        carrossel.style.transition = "transform 1s ease-in-out"; // Efeito suave
+        carrossel.style.transform = `translateX(-${index * 100}%)`; // Move o carrossel para a esquerda
+        carrossel.style.transition = "transform 1s ease-in-out"; // Transição suave
     }
 
     // Atualiza a cada 3 segundos
