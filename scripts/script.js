@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Carrossel automático
     let index = 0;
     const carrossel = document.querySelector(".carrossel");
-    const imagens = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]; // Caminho ajustado
-
-    // Ajustar a largura do carrossel para acomodar todas as imagens
-    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
+    const imagens = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]; // Caminho das imagens
 
     imagens.forEach((src) => {
         let img = document.createElement("img");
@@ -16,17 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
         img.style.width = "100%";
         img.style.height = "100%";
         img.style.objectFit = "cover";
-        img.style.flexShrink = "0";
+        img.style.flexShrink = "0"; // Evitar que a imagem encolha
         carrossel.appendChild(img);
     });
 
+    // Função para atualizar o carrossel
     function atualizarCarrossel() {
         const totalImagens = imagens.length;
-        index = (index + 1) % totalImagens; // Passa para a próxima imagem
-        carrossel.style.transform = `translateX(-${index * 100}%)`; // Ajusta a posição da imagem
+        index = (index + 1) % totalImagens;
+        carrossel.style.transform = `translateX(-${index * 100}%)`; // Mover as imagens para a esquerda
+        carrossel.style.transition = "transform 1s ease-in-out"; // Efeito suave
     }
 
-    setInterval(atualizarCarrossel, 3000); // Atualiza o carrossel a cada 3 segundos
+    // Atualiza a cada 3 segundos
+    setInterval(atualizarCarrossel, 3000);
 
     // Configuração do botão de WhatsApp
     document.querySelectorAll(".botao-whatsapp").forEach(botao => {
