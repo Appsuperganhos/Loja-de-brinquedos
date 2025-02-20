@@ -14,7 +14,7 @@ body {
 
 /* Cabeçalho com fundo azul e logo centralizada */
 header {
-    background-color: #007bff;
+    background-color: #800080;
     position: relative;
     height: 80px;
     display: flex;
