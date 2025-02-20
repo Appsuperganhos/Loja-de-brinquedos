@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const carrossel = document.querySelector(".carrossel");
     const imagens = ["img1.jpg", "img2.jpg", "img3.jpg"]; // Caminho das imagens
 
-    // Ajusta a largura do carrossel com base na quantidade de imagens
-    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
-
+    // Criando as imagens e adicionando ao carrossel
     imagens.forEach((src) => {
         let img = document.createElement("img");
         img.src = `public/images/${src}`; // Caminho correto para acessar as imagens dentro de 'public/images'
@@ -20,12 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
         carrossel.appendChild(img);
     });
 
+    // Ajustar a largura do carrossel para que todas as imagens fiquem alinhadas horizontalmente
+    carrossel.style.display = "flex";
+    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem, totalizando todas as imagens
+    carrossel.style.transition = "transform 1s ease-in-out"; // Transição suave para o movimento
+
     // Função para atualizar o carrossel
     function atualizarCarrossel() {
         const totalImagens = imagens.length;
         index = (index + 1) % totalImagens; // Ciclo das imagens
-        carrossel.style.transition = "transform 1s ease-in-out"; // Transição suave
-        carrossel.style.transform = `translateX(-${index * 100}%)`; // Move o carrossel para a esquerda
+        carrossel.style.transform = `translateX(-${index * 100}%)`; // Move o carrossel para a esquerda, exibindo uma nova imagem
     }
 
     // Atualiza a cada 3 segundos
