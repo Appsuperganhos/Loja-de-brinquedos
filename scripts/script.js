@@ -4,30 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Carrossel automático
     let index = 0;
     const carrossel = document.querySelector(".carrossel");
-    const imagens = ["img1.jpg", "img2.jpg", "img3.jpg"]; // Caminho das imagens
+    const imagens = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg"]; // Caminho das imagens
 
-    // Criando as imagens e adicionando ao carrossel
+    // Ajusta a largura do carrossel com base na quantidade de imagens
+    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
+
     imagens.forEach((src) => {
         let img = document.createElement("img");
-        img.src = `public/images/${src}`; // Caminho correto para acessar as imagens dentro de 'public/images'
+        img.src = `/${src}`; // Caminho correto para acessar as imagens dentro de 'public/images'
         img.alt = "Imagem do carrossel";
-        img.style.width = "100%"; // A imagem vai ter 100% da largura da tela
-        img.style.height = "100%"; // A altura será 100% da altura do carrossel
-        img.style.objectFit = "cover"; // Garante que a imagem se ajuste bem
-        img.style.flexShrink = "0"; // Impede que as imagens encolham
         carrossel.appendChild(img);
     });
-
-    // Ajustar a largura do carrossel para que todas as imagens fiquem alinhadas horizontalmente
-    carrossel.style.display = "flex";
-    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem, totalizando todas as imagens
-    carrossel.style.transition = "transform 1s ease-in-out"; // Transição suave para o movimento
 
     // Função para atualizar o carrossel
     function atualizarCarrossel() {
         const totalImagens = imagens.length;
-        index = (index + 1) % totalImagens; // Ciclo das imagens
-        carrossel.style.transform = `translateX(-${index * 100}%)`; // Move o carrossel para a esquerda, exibindo uma nova imagem
+        index = (index + 1) % totalImagens;
+        carrossel.style.transform = `translateX(-${index * 100}%)`; // Move o carrossel para a esquerda
     }
 
     // Atualiza a cada 3 segundos
