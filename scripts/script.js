@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Carrossel automático
     let index = 0;
     const carrossel = document.querySelector(".carrossel");
-    const imagens = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]; // Caminho das imagens
+    const imagens = ["public/images/img1.jpg", "public/images/img2.jpg", "public/images/img3.jpg"]; // Caminho das imagens
 
     // Ajusta a largura do carrossel com base na quantidade de imagens
     carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
