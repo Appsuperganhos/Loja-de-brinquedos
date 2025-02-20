@@ -19,6 +19,19 @@ header {
     position: relative;
 }
 
+/* Posicionamento e tamanho da logo no cabeçalho */
+.header-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.header-logo img {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+}
+
 nav {
     position: relative;
 }
