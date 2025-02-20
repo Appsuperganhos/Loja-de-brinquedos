@@ -1,23 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Script carregado!");
 
-    // Definindo as variáveis
-    const bannerWrapper = document.querySelector("#banner .banner-wrapper");
-    const imagens = document.querySelectorAll("#banner .banner-image");
-    let imagemAtual = 0;
-
-    // Função para avançar a imagem do banner
-    function avançarBanner() {
-        imagemAtual++;
-        if (imagemAtual >= imagens.length) {
-            imagemAtual = 0; // Volta para a primeira imagem
-        }
-        bannerWrapper.style.transform = `translateX(-${imagemAtual * 100}%)`;
-    }
-
-    // Intervalo para a troca automática de imagens
-    setInterval(avançarBanner, 5000); // Troca a cada 5 segundos
-
     // Configuração do botão de WhatsApp
     document.querySelectorAll(".botao-whatsapp").forEach(botao => {
         botao.addEventListener("click", function () {
@@ -33,5 +16,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menuToggle.addEventListener("click", function () {
         menu.classList.toggle("active");
+    });
+
+    // Banner com deslize automático e manual
+    let currentIndex = 0;
+    const images = document.querySelectorAll("#banner .banner-images img");
+    const totalImages = images.length;
+
+    function slideBanner() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        const offset = -currentIndex * 100;
+        document.querySelector(".banner-images").style.transform = `translateX(${offset}%)`;
+    }
+
+    // Deslizar automaticamente
+    setInterval(slideBanner, 3000); // Troca de imagem a cada 3 segundos
+
+    // Navegação manual (clicando nas imagens do banner)
+    document.querySelectorAll(".banner-images img").forEach((img, index) => {
+        img.addEventListener("click", () => {
+            currentIndex = index;
+            const offset = -currentIndex * 100;
+            document.querySelector(".banner-images").style.transform = `translateX(${offset}%)`;
+        });
     });
 });
