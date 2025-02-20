@@ -16,7 +16,7 @@ body {
 header {
     background-color: #007bff;
     position: relative;
-    height: 115px;
+    height: 105px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@ header {
 }
 
 .header-logo img {
-    width: 110px; /* Tamanho menor da logo */
+    width: 100px; /* Tamanho menor da logo */
     height: auto;
     object-fit: contain;
 }
