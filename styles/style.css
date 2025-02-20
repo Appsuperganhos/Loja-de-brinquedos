@@ -71,9 +71,15 @@ section {
     max-width: 2560px; /* Largura máxima */
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
-#banner img {
+.banner-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.banner-image {
     width: 100%;
     height: auto;
     display: block;
