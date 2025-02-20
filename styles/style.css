@@ -77,11 +77,10 @@ section {
 .banner-wrapper {
     display: flex;
     transition: transform 1s ease-in-out;
-    width: 500%; /* 5 imagens, cada uma com 100% de largura */
 }
 
 .banner-image {
-    width: 20%; /* Cada imagem ocupa 20% da largura */
+    width: 100%;
     height: auto;
     display: block;
 }
