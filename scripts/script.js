@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     imagens.forEach((src) => {
         let img = document.createElement("img");
-        img.src = `/${src}`; // Caminho correto para acessar as imagens dentro de 'public/images'
+        img.src = `public/images/${src}`; // Caminho correto para acessar as imagens dentro de 'public/images'
         img.alt = "Imagem do carrossel";
         img.style.width = "100%"; // A imagem vai ter 100% da largura da tela
         img.style.height = "100%"; // A altura será 100% da altura do carrossel
