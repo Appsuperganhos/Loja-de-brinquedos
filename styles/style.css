@@ -68,18 +68,17 @@ section {
 /* Estilo para o novo banner */
 #banner {
     width: 100%;
-    max-width: 2560px; /* Largura máxima */
+    max-width: 2560px;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
 }
 
-.banner-wrapper {
+.banner-images {
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
-.banner-image {
+.banner-images img {
     width: 100%;
     height: auto;
     display: block;
