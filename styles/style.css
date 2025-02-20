@@ -15,7 +15,7 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    padding: 10px; /* Reduzindo a espessura */
+    padding: 10px;
     position: relative;
 }
 
@@ -30,13 +30,13 @@ nav {
     font-size: 24px;
     cursor: pointer;
     position: absolute;
-    left: 10px; /* Posicionado no canto esquerdo */
+    left: 10px;
     top: 10px;
 }
 
 nav ul {
     list-style: none;
-    display: none; /* Oculto por padrão no mobile */
+    display: none;
     flex-direction: column;
     background-color: #007bff;
     position: absolute;
@@ -44,10 +44,11 @@ nav ul {
     top: 40px;
     width: 100%;
     padding: 10px 0;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul.active {
-    display: flex; /* Mostra quando ativo */
+    display: flex;
 }
 
 nav ul li {
@@ -67,13 +68,25 @@ section {
 .carrossel {
     width: 100%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 300px;
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+}
+
+.carrossel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.produtos-container {
+    margin-top: 20px;
 }
 
 .produto {
@@ -99,6 +112,7 @@ section {
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .botao-whatsapp:hover {
