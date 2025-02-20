@@ -76,6 +76,7 @@ section {
     display: flex;
     white-space: nowrap;
     position: relative;
+    transition: transform 1s ease-in-out; /* Garantir transição suave ao mover */
 }
 
 .carrossel img {
