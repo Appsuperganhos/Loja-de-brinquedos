@@ -4,17 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Carrossel automático
     let index = 0;
     const carrossel = document.querySelector(".carrossel");
-    const imagens = ["/public/images/img1.jpg", "/public/images/img2.jpg", "/public/images/img3.jpg"]; // Caminho das imagens
+    const imagens = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg"]; // Caminho das imagens dentro da pasta 'images'
 
     // Ajusta a largura do carrossel com base na quantidade de imagens
     carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
 
     imagens.forEach((src) => {
         let img = document.createElement("img");
-        img.src = src;
+        img.src = `/public/${src}`; // Caminho absoluto para as imagens, que estará acessível a partir da raiz do site
         img.alt = "Imagem do carrossel";
         img.style.width = "100%"; // A imagem vai ter 100% da largura da tela
-        img.style.height = "100vh"; // A altura será 100% da altura da tela
+        img.style.height = "50vh"; // A altura será 50% da altura da tela
         img.style.objectFit = "cover"; // Garante que a imagem se ajuste bem
         img.style.flexShrink = "0"; // Impede que as imagens encolham
         carrossel.appendChild(img);
