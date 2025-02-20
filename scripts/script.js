@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Carrossel automático
     let index = 0;
     const carrossel = document.querySelector(".carrossel");
-    const imagens = ["public/images/img1.jpg", "public/images/img2.jpg", "public/images/img3.jpg"];
+    const imagens = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"]; // Caminho ajustado
+
+    // Ajustar a largura do carrossel para acomodar todas as imagens
+    carrossel.style.width = `${100 * imagens.length}%`; // 100% por imagem
 
     imagens.forEach((src) => {
         let img = document.createElement("img");
@@ -19,12 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function atualizarCarrossel() {
         const totalImagens = imagens.length;
-        index = (index + 1) % totalImagens;
-        carrossel.style.transform = `translateX(-${index * 100}%)`;
-        carrossel.style.transition = "transform 1s ease-in-out";
+        index = (index + 1) % totalImagens; // Passa para a próxima imagem
+        carrossel.style.transform = `translateX(-${index * 100}%)`; // Ajusta a posição da imagem
     }
 
-    setInterval(atualizarCarrossel, 3000);
+    setInterval(atualizarCarrossel, 3000); // Atualiza o carrossel a cada 3 segundos
 
     // Configuração do botão de WhatsApp
     document.querySelectorAll(".botao-whatsapp").forEach(botao => {
