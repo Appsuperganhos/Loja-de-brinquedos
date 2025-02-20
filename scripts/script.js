@@ -17,4 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.addEventListener("click", function () {
         menu.classList.toggle("active");
     });
+
+    // Configuração do banner para deslizar automaticamente
+    const banners = document.querySelectorAll(".banner-image");
+    const wrapper = document.querySelector(".banner-wrapper");
+    let currentIndex = 0;
+    const totalBanners = banners.length;
+
+    function changeBanner() {
+        // Desloca as imagens para a esquerda
+        wrapper.style.transform = `translateX(-${(currentIndex + 1) * 100}%)`;
+
+        // Atualiza o índice do banner
+        currentIndex = (currentIndex + 1) % totalBanners;  // Loop infinito
+    }
+
+    // Inicializa a animação de mudança de banner
+    setInterval(changeBanner, 3000); // Troca a cada 3 segundos
 });
