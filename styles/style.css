@@ -66,7 +66,7 @@ section {
 }
 
 .carrossel {
-    width: 300%; /* Ajusta para 100% por imagem */
+    width: 100%;
     max-width: 800px;
     margin: 20px auto 0 auto;
     overflow: hidden;
@@ -76,11 +76,10 @@ section {
     display: flex;
     white-space: nowrap;
     position: relative;
-    transition: transform 1s ease-in-out; /* Adiciona a transição */
 }
 
 .carrossel img {
-    width: 100%; /* Garante que cada imagem ocupe 100% da largura da área do carrossel */
+    width: 100%;
     height: 100%;
     object-fit: cover;
     flex-shrink: 0;
