@@ -67,7 +67,7 @@ section {
 
 .carrossel {
     width: 100%;
-    max-width: 100%; /* Largura total da tela */
+    max-width: 100%;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
