@@ -21,7 +21,6 @@
         </nav>
     </header>
 
-    <!-- Banner colado logo abaixo do cabeçalho -->
     <section id="banner">
         <div class="banner-images">
             <img src="public/images/banner1.jpg" alt="Promoção 1">
@@ -39,82 +38,29 @@
         <h2>LINHA CLÁSSICA</h2>
         <div class="produtos-carrossel">
             <div class="produtos-wrapper">
-                <div class="produto">
+                <div class="produto" data-nome="Jeep Wrangler Rubicon 12V" data-preco="R$ 2.999,00" data-parcelamento="10X de R$ 299,00 S/juros" data-imagens='["public/images/carro1.jpg", "public/images/carro1-2.jpg"]'>
                     <img src="public/images/carro1.jpg" alt="Jeep Wrangler Rubicon 12V">
                     <h3>Jeep Wrangler Rubicon 12V</h3>
                     <p>R$ 2.999,00</p>
                     <p>10X de R$ 299,00 S/juros</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Jeep Wrangler Rubicon 12V!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro2.jpg" alt="Porsche 911 6V">
-                    <h3>Porsche 911 6V</h3>
-                    <p>R$ 2.199,00</p>
-                    <p>10X de R$ 219,00 S/juros</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Porsche 911 6V!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro3.jpg" alt="Porsche 911 6V">
-                    <h3>Porsche 911 6V</h3>
-                    <p>R$ 2.199,00</p>
-                    <p>10X de R$ 219,00 S/juros</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Porsche 911 6V!" class="botao-whatsapp">Comprar via WhatsApp</a>
+                    <button class="ver-detalhes">Ver Mais Detalhes</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="produtos-premium">
-        <h2>LINHA PREMIUM</h2>
-        <div class="produtos-carrossel">
-            <div class="produtos-wrapper">
-                <div class="produto">
-                    <img src="public/images/carro4.jpg" alt="Carrinho Premium Modelo 1">
-                    <h3>Carro Premium Modelo 1</h3>
-                    <p>R$ 2.499,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Premium Modelo 1!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro5.jpg" alt="Carrinho Premium Modelo 2">
-                    <h3>Carro Premium Modelo 2</h3>
-                    <p>R$ 2.799,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Premium Modelo 2!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro6.jpg" alt="Carrinho Premium Modelo 3">
-                    <h3>Carro Premium Modelo 3</h3>
-                    <p>R$ 3.199,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Premium Modelo 3!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-carrossel">
+                <div class="carrossel-imagens"></div>
             </div>
+            <h2 id="modal-nome"></h2>
+            <p id="modal-preco"></p>
+            <p id="modal-parcelamento"></p>
+            <a id="modal-whatsapp" href="#" class="botao-whatsapp">Comprar via WhatsApp</a>
         </div>
-    </section>
-
-    <section id="produtos-tematicos">
-        <h2>TEMÁTICOS</h2>
-        <div class="produtos-carrossel">
-            <div class="produtos-wrapper">
-                <div class="produto">
-                    <img src="public/images/carro7.jpg" alt="Carrinho Temático Modelo 1">
-                    <h3>Carro Temático Modelo 1</h3>
-                    <p>R$ 1.999,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Temático Modelo 1!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro8.jpg" alt="Carrinho Temático Modelo 2">
-                    <h3>Carro Temático Modelo 2</h3>
-                    <p>R$ 2.199,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Temático Modelo 2!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro9.jpg" alt="Carrinho Temático Modelo 3">
-                    <h3>Carro Temático Modelo 3</h3>
-                    <p>R$ 2.599,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Temático Modelo 3!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <footer>
         <p>© 2025 v12 kids. Todos os direitos reservados.</p>
