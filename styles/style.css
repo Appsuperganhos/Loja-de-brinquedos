@@ -78,10 +78,10 @@ section {
     padding: 40px 20px;
 }
 
-/* Estilo para o banner responsivo */
+/* Estilo para o banner responsivo menor */
 #banner {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1280px;
     height: auto;
     margin: 10px auto;
     overflow: hidden;
@@ -97,7 +97,7 @@ section {
 .banner-images img {
     width: 100%;
     height: auto;
-    max-height: 720px;
+    max-height: 480px;
     object-fit: cover;
     display: block;
     flex: 1 0 100%;
