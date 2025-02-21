@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
   });
 
-  // Configuração do botão "Ver descrição do produto" no modal principal
+  // Configuração do botão "Ver Descrição" no modal principal
   document.querySelector(".btn-ver-descricao").addEventListener("click", function () {
     const modal = document.getElementById("product-modal");
     const description = modal.getAttribute("data-description") || "Descrição não disponível.";
