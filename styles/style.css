@@ -150,8 +150,8 @@ footer {
 /* Animação de deslize do banner */
 @keyframes slide {
     0%, 33.33% { transform: translateX(0); }
-    36.33%, 66.66% { transform: translateX(-100vw); }
-    69.66%, 100% { transform: translateX(-200vw); }
+    33.34%, 66.66% { transform: translateX(-100vw); }
+    66.67%, 100% { transform: translateX(-200vw); }
 }
 
 .banner-images {
