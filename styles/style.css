@@ -155,4 +155,5 @@ footer {
 
 .banner-images {
     animation: slide 12s infinite ease-in-out;
+    justify-content: center; /* Centraliza as imagens */
 }
