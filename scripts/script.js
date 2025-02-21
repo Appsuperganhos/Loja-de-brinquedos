@@ -18,30 +18,31 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("active");
     });
 
-    // Banner com deslize automático e manual
-    let currentIndex = 0;
-    const images = document.querySelectorAll("#banner .banner-images img");
-    const totalImages = images.length;
+    // Banner com deslize infinito
     const bannerContainer = document.querySelector(".banner-images");
+    let images = document.querySelectorAll("#banner .banner-images img");
+    let currentIndex = 0;
+    const totalImages = images.length;
+
+    // Clona a primeira imagem e adiciona ao final para criar o efeito de loop
+    const firstImageClone = images[0].cloneNode(true);
+    bannerContainer.appendChild(firstImageClone);
 
     function slideBanner() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateBannerPosition();
-    }
+        currentIndex++;
 
-    function updateBannerPosition() {
-    const offset = -currentIndex * 100; // Agora funciona corretamente com %
-    bannerContainer.style.transform = `translateX(${offset}%)`;
-}
+        bannerContainer.style.transition = "transform 1s ease-in-out";
+        bannerContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        if (currentIndex === totalImages) {
+            setTimeout(() => {
+                bannerContainer.style.transition = "none"; // Remove a transição para resetar sem efeito
+                bannerContainer.style.transform = `translateX(0)`;
+                currentIndex = 0;
+            }, 1000); // Espera a animação terminar antes de resetar
+        }
+    }
 
     // Deslizar automaticamente
     setInterval(slideBanner, 4000); // Troca de imagem a cada 4 segundos
-
-    // Navegação manual (clicando nas imagens do banner)
-    images.forEach((img, index) => {
-        img.addEventListener("click", () => {
-            currentIndex = index;
-            updateBannerPosition();
-        });
-    });
 });
