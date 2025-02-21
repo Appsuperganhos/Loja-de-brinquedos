@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("active");
   });
 
-  // Banner com deslize infinito
+  // Banner com deslize infinito (conforme o código original)
   const bannerContainer = document.querySelector(".banner-images");
   let images = document.querySelectorAll("#banner .banner-images img");
   let currentIndex = 0;
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Navegação do carrossel dentro do modal principal
+  // Navegação do carrossel no modal principal
   document.querySelector(".carousel-prev").addEventListener("click", function () {
     const modal = document.getElementById("product-modal");
     const carouselWrapper = modal.querySelector(".modal-carousel-wrapper");
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".btn-ver-descricao").addEventListener("click", function () {
     const modal = document.getElementById("product-modal");
     const description = modal.getAttribute("data-description") || "Descrição não disponível.";
-    // Converte quebras de linha (\n) em <br>
+    // Converte quebras de linha (\n) em <br> para formatação
     const formattedDescription = description.replace(/\n/g, '<br>');
     const subModal = document.getElementById("description-modal");
     subModal.querySelector(".sub-modal-description").innerHTML = formattedDescription;
