@@ -104,17 +104,26 @@ section {
     object-fit: cover;
 }
 
-.produtos-container {
-    margin-top: 20px;
+.produtos-carrossel {
+    display: flex;
+    overflow-x: auto; /* Habilita o deslizamento horizontal */
+    padding: 20px 0;
+}
+
+.produtos-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Evita quebra de linha */
 }
 
 .produto {
     background: white;
     padding: 20px;
-    margin: 20px auto;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    flex-shrink: 0; /* Impede que o produto encolha */
+    width: 250px;
+    text-align: center;
 }
 
 .produto img {
@@ -143,15 +152,4 @@ footer {
     color: white;
     padding: 20px;
     margin-top: 40px;
-}
-
-/* Animação de deslize do banner */
-@keyframes slide {
-    0%, 33.33% { transform: translateX(0); }
-    36.33%, 66.66% { transform: translateX(-100%); }
-    69.66%, 100% { transform: translateX(-200%); }
-}
-
-.banner-images {
-    animation: slide 12s infinite ease-in-out;
 }
