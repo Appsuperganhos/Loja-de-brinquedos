@@ -80,23 +80,26 @@ section {
 
 /* Estilo para o novo banner */
 #banner {
-    width: 1920px;
-    height: 720px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .banner-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 300%;
 }
 
 .banner-images img {
-    width: 1920px;
-    height: 720px;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
     display: block;
+    flex: 1 0 100%;
 }
 
 .produtos-container {
@@ -138,4 +141,16 @@ footer {
     color: white;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* Animação de deslize do banner */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.banner-images {
+    animation: slide 9s infinite ease-in-out;
 }
