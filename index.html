@@ -40,44 +40,49 @@
     <h2>LINHA CLÁSSICA</h2>
     <div class="produtos-carrossel">
       <div class="produtos-wrapper">
-        <!-- Primeiro produto com descrição detalhada -->
+        <!-- Primeiro produto com descrição detalhada armazenada em formato simples -->
         <div class="produto"
-             data-description="LINHA CLÁSSICA<br><br>
-CARRINHO ELÉTRICO INFANTIL<br><br>
-JIPE OFF ROAD 12V<br>
-NOVO - COM GARANTIA<br>
-PREÇO: 10x 299,00 S/JUROS<br><br>
-INCLUI: Controle remoto e carregador<br><br>
-BRINDES EXCLUSIVOS:<br>
-- CNH Infantil<br>
-- Documento do carrinho<br><br>
-ESPECIFICAÇÕES:<br>
-- Voltagem: 12V<br>
-- Assento: 1<br>
-- Tempo de carga: 8 a 12 horas<br>
-- Capacidade máxima: 40 kg<br>
-- Motores: 2 (4x2)<br>
-- Velocidade: 3 a 5 km/h<br>
-- Velocidades manuais: 1<br>
-- Portas que abrem: Sim<br>
-- Bancos: Plástico<br>
-- Pneus: Plástico<br>
-- Cinto de segurança: Sim<br>
-- Buzina no volante: Sim<br>
-- Sistema de som: Sim<br><br>
-*Conectividade:*<br>
-- Pen-drive: Sim<br>
-- Cartão de memória: Não<br>
-- Cabo Auxiliar: Não<br>
-- Bluetooth: Sim<br>
-- Liga/Desliga: Botão start-stop<br>
-- Painel iluminado: Não<br>
-- Faróis: Sim<br>
-- Lanternas: Não<br><br>
-DIMENSÕES:<br>
-- Altura: 72 cm<br>
-- Largura: 61 cm<br>
-- Comprimento: 100 cm"
+             data-description="LINHA CLÁSSICA
+CARRINHO ELÉTRICO INFANTIL
+JIPE OFF ROAD 12V
+NOVO - COM GARANTIA
+PREÇO: 10x 299,00 S/JUROS
+
+INCLUI: Controle remoto e carregador
+
+BRINDES EXCLUSIVOS:
+CNH Infantil
+Documento do carrinho
+
+ESPECIFICAÇÕES:
+Voltagem: 12V
+Assento: 1
+Tempo de carga: 8 a 12 horas
+Capacidade máxima: 40 kg
+Motores: 2 (4x2)
+Velocidade: 3 a 5 km/h
+Velocidades manuais: 1
+Portas que abrem: Sim
+Bancos: Plástico
+Pneus: Plástico
+Cinto de segurança: Sim
+Buzina no volante: Sim
+Sistema de som: Sim
+
+*Conectividade:*
+Pen-drive: Sim
+Cartão de memória: Não
+Cabo Auxiliar: Não
+Bluetooth: Sim
+Liga/Desliga: Botão start-stop
+Painel iluminado: Não
+Faróis: Sim
+Lanternas: Não
+
+DIMENSÕES:
+Altura: 72 cm
+Largura: 61 cm
+Comprimento: 100 cm"
              data-payment="10X de R$299 S/juros • Cartão, Pix e Boleto disponíveis"
              data-images="public/images/carro1.jpg,public/images/carro1_1.jpg,public/images/carro1_2.jpg"
              data-whatsapp="Olá, quero mais informações sobre o Jeep Wrangler Rubicon 12V!">
@@ -209,9 +214,20 @@ DIMENSÕES:<br>
       </div>
       <div class="modal-details">
         <h3 class="modal-title"></h3>
-        <p class="modal-description"></p>
         <p class="modal-payment"></p>
+        <!-- Botão para abrir o sub modal com a descrição do produto -->
+        <button class="btn-ver-descricao">Ver descrição do produto</button>
         <a href="#" class="modal-whatsapp">Comprar via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub Modal para exibir a descrição do produto -->
+  <div id="description-modal" class="sub-modal">
+    <div class="sub-modal-content">
+      <span class="sub-modal-close">&times;</span>
+      <div class="sub-modal-description">
+        <!-- A descrição será inserida aqui via JavaScript -->
       </div>
     </div>
   </div>
