@@ -78,12 +78,12 @@ section {
     padding: 40px 20px;
 }
 
-/* Estilo para o banner responsivo menor */
+/* Estilo para o banner colado ao cabeçalho */
 #banner {
     width: 100%;
     max-width: 1280px; 
     height: 220px; /* Pequeno ajuste na altura */
-    margin: 10px auto;
+    margin: 0 auto; /* Remove qualquer margem para colar no cabeçalho */
     overflow: hidden;
     position: relative;
     display: flex;
