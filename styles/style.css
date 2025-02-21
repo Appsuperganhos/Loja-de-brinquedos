@@ -28,7 +28,7 @@ header {
 }
 
 .header-logo img {
-    width: 67px; /* Tamanho menor da logo */
+    width: 67px;
     height: auto;
     object-fit: contain;
 }
@@ -80,8 +80,9 @@ section {
 
 /* Estilo para o novo banner */
 #banner {
-    width: 100%;
-    max-width: 2560px;
+    width: 1920px;
+    height: 720px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -92,8 +93,9 @@ section {
 }
 
 .banner-images img {
-    width: 100%;
-    height: auto;
+    width: 1920px;
+    height: 720px;
+    object-fit: cover;
     display: block;
 }
 
