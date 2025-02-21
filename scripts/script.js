@@ -22,22 +22,26 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
     const images = document.querySelectorAll("#banner .banner-images img");
     const totalImages = images.length;
+    const bannerContainer = document.querySelector(".banner-images");
 
     function slideBanner() {
         currentIndex = (currentIndex + 1) % totalImages;
+        updateBannerPosition();
+    }
+
+    function updateBannerPosition() {
         const offset = -currentIndex * 100;
-        document.querySelector(".banner-images").style.transform = `translateX(${offset}%)`;
+        bannerContainer.style.transform = `translateX(${offset}%)`;
     }
 
     // Deslizar automaticamente
-    setInterval(slideBanner, 3000); // Troca de imagem a cada 3 segundos
+    setInterval(slideBanner, 4000); // Troca de imagem a cada 4 segundos
 
     // Navegação manual (clicando nas imagens do banner)
-    document.querySelectorAll(".banner-images img").forEach((img, index) => {
+    images.forEach((img, index) => {
         img.addEventListener("click", () => {
             currentIndex = index;
-            const offset = -currentIndex * 100;
-            document.querySelector(".banner-images").style.transform = `translateX(${offset}%)`;
+            updateBannerPosition();
         });
     });
 });
