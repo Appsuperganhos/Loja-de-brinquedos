@@ -46,22 +46,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Deslizar automaticamente
     setInterval(slideBanner, 4000); // Troca de imagem a cada 4 segundos
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Abrir o modal
-    window.abrirModal = function(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    };
-
-    // Fechar o modal
-    window.fecharModal = function(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    };
-
-    // Fechar modal ao clicar fora da janela
-    window.onclick = function(event) {
-        if (event.target.className === "modal") {
-            event.target.style.display = "none";
-        }
-    };
-});
