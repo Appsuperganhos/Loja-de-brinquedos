@@ -96,12 +96,14 @@ section {
     display: flex;
     transition: transform 1s ease-in-out;
     height: 100%;
+    width: 300%; /* Garante que todas as imagens cabem sem espaços */
 }
 
 .banner-images img {
-    width: 100%;
+    width: 100vw; /* Ocupa toda a largura da tela */
     height: 100%;
     object-fit: cover;
+    flex: 1 0 100vw; /* Garante que cada imagem ocupa exatamente 100vw */
 }
 
 .produtos-container {
@@ -148,8 +150,8 @@ footer {
 /* Animação de deslize do banner */
 @keyframes slide {
     0%, 33.33% { transform: translateX(0); }
-    36.33%, 66.66% { transform: translateX(-100%); }
-    69.66%, 100% { transform: translateX(-200%); }
+    36.33%, 66.66% { transform: translateX(-100vw); }
+    69.66%, 100% { transform: translateX(-200vw); }
 }
 
 .banner-images {
