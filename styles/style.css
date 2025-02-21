@@ -20,7 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    margin-bottom: 0;
 }
 
 /* Logo centralizada */
@@ -78,7 +78,7 @@ section {
 /* Estilo para o banner responsivo menor */
 #banner {
     width: 100%;
-    max-width: 1280px; 
+    max-width: 1280px;
     height: 220px;
     margin: 0 auto;
     overflow: hidden;
@@ -86,8 +86,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
-    z-index: 5;
 }
 
 .banner-images {
