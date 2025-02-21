@@ -1,156 +1,235 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f8f8f8;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Cabeçalho com fundo azul e logo centralizada */
 header {
-    background-color: #4B0082;
-    position: relative;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+  background-color: #4B0082;
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Logo centralizada */
 .header-logo img {
-    width: 67px;
-    height: auto;
-    object-fit: contain;
+  width: 67px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Navegação posicionada no canto superior direito */
 nav {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 nav ul {
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    background-color: #007bff;
-    position: absolute;
-    top: 40px;
-    right: 10px;
-    padding: 10px 0;
-    transition: all 0.3s ease-in-out;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background-color: #007bff;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
 }
 
 nav ul.active {
-    display: flex;
+  display: flex;
 }
 
 nav ul li {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 section {
-    padding: 40px 20px;
+  padding: 40px 20px;
 }
 
 /* Estilo para o banner responsivo menor */
 #banner {
-    width: 100%;
-    max-width: 1280px;
-    height: 150px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+  width: 100%;
+  max-width: 1280px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .banner-images {
-    display: flex;
-    transition: transform 1s ease-in-out;
-    height: 100%;
+  display: flex;
+  transition: transform 1s ease-in-out;
+  height: 100%;
 }
 
 .banner-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Carrossel de produtos */
 .produtos-carrossel {
-    display: flex;
-    overflow-x: auto; /* Habilita o deslizamento horizontal */
-    padding: 20px 0;
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
 }
 
 .produtos-wrapper {
-    display: flex;
-    flex-wrap: nowrap; /* Evita quebra de linha */
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .produto {
-    background: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Impede que o produto encolha */
-    width: 250px;
-    text-align: center;
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  width: 250px;
+  text-align: center;
 }
 
 .produto img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .botao-whatsapp {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s ease-in-out;
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .botao-whatsapp:hover {
-    background-color: #1EBE5D;
+  background-color: #1EBE5D;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+}
+
+.modal-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.modal-carousel-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.modal-details {
+  text-align: left;
+  margin-top: 20px;
 }
