@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("active");
     });
 
-    // Banner com deslize automático e manual
+    // Configuração do banner
     let currentIndex = 0;
     const images = document.querySelectorAll("#banner .banner-images img");
     const totalImages = images.length;
@@ -30,12 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateBannerPosition() {
+        // Ajuste para garantir que a última imagem não cause espaço em branco
         const offset = -currentIndex * 100;
-        bannerContainer.style.transform = `translateX(${offset}%)`;
+        bannerContainer.style.transform = `translateX(${offset}vw)`;
     }
 
-    // Deslizar automaticamente
-    setInterval(slideBanner, 4000); // Troca de imagem a cada 4 segundos
+    // Deslizar automaticamente a cada 4 segundos
+    setInterval(slideBanner, 4000);
 
     // Navegação manual (clicando nas imagens do banner)
     images.forEach((img, index) => {
