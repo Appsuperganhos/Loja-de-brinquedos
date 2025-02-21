@@ -132,10 +132,10 @@ section {
   border-radius: 10px;
 }
 
-/* Botão aprimorado "Ver Detalhes" */
+/* Botão aprimorado "Ver Detalhes" em roxo */
 .btn-detalhes {
   display: inline-block;
-  background-color: #ff4500;
+  background-color: #800080;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -149,7 +149,7 @@ section {
 }
 
 .btn-detalhes:hover {
-  background-color: #e03d00;
+  background-color: #9932CC;
 }
 
 footer {
