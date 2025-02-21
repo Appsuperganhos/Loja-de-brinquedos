@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Obtém os dados do produto a partir do cartão
       const produto = e.target.closest(".produto");
       const title = produto.querySelector("h3").innerText;
+      // Utiliza innerHTML para permitir renderizar a formatação (como <br>) na descrição
       const description = produto.getAttribute("data-description") || "Descrição não disponível.";
       const payment = produto.getAttribute("data-payment") || "Formas de pagamento não informadas.";
       const whatsappMsg = produto.getAttribute("data-whatsapp") || `Olá, quero comprar o ${title}!`;
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Popula o modal com os dados do produto
       const modal = document.getElementById("product-modal");
       modal.querySelector(".modal-title").innerText = title;
-      modal.querySelector(".modal-description").innerText = description;
+      modal.querySelector(".modal-description").innerHTML = description;
       modal.querySelector(".modal-payment").innerText = payment;
       modal.querySelector(".modal-whatsapp").setAttribute("href", `https://wa.me/5588999999999?text=${encodeURIComponent(whatsappMsg)}`);
 
