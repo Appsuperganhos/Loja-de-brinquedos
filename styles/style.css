@@ -237,3 +237,22 @@ footer {
   text-align: left;
   margin-top: 20px;
 }
+
+/* Botão WhatsApp no modal: centralizado e estilizado em verde */
+.modal-whatsapp {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: #25D366;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.modal-whatsapp:hover {
+  background-color: #1ebc59;
+}
