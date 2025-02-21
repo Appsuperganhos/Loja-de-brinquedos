@@ -104,6 +104,7 @@ section {
     object-fit: cover;
 }
 
+/* Carrossel de produtos */
 .produtos-carrossel {
     display: flex;
     overflow-x: auto; /* Habilita o deslizamento horizontal */
