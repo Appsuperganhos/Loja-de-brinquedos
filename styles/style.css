@@ -261,6 +261,25 @@ footer {
   background-color: #1ebc59;
 }
 
+/* Estilo para o botão "Ver Descrição" */
+.btn-ver-descricao {
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid #800080;
+  color: #800080;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.btn-ver-descricao:hover {
+  background-color: #800080;
+  color: #fff;
+}
+
 /* Sub Modal para descrição do produto */
 .sub-modal {
   display: none;
