@@ -82,7 +82,7 @@ section {
 #banner {
     width: 100%;
     max-width: 1280px;
-    height: 130px;
+    height: 150px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -96,14 +96,12 @@ section {
     display: flex;
     transition: transform 1s ease-in-out;
     height: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
 .banner-images img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .produtos-container {
