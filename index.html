@@ -39,78 +39,35 @@
         <h2>LINHA CLÁSSICA</h2>
         <div class="produtos-carrossel">
             <div class="produtos-wrapper">
+                <!-- Produto 1 - Jeep Wrangler Rubicon 12V -->
                 <div class="produto">
                     <img src="public/images/carro1.jpg" alt="Jeep Wrangler Rubicon 12V">
                     <h3>Jeep Wrangler Rubicon 12V</h3>
                     <p>R$ 2.999,00</p>
                     <p>10X de R$ 299,00 S/juros</p>
                     <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Jeep Wrangler Rubicon 12V!" class="botao-whatsapp">Comprar via WhatsApp</a>
+                    <!-- Botão para abrir o modal -->
+                    <button class="botao-detalhes" onclick="abrirModal('modal-1')">Ver mais detalhes</button>
                 </div>
-                <div class="produto">
-                    <img src="public/images/carro2.jpg" alt="Porsche 911 6V">
-                    <h3>Porsche 911 6V</h3>
-                    <p>R$ 2.199,00</p>
-                    <p>10X de R$ 219,00 S/juros</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Porsche 911 6V!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro3.jpg" alt="Porsche 911 6V">
-                    <h3>Porsche 911 6V</h3>
-                    <p>R$ 2.199,00</p>
-                    <p>10X de R$ 219,00 S/juros</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Porsche 911 6V!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="produtos-premium">
-        <h2>LINHA PREMIUM</h2>
-        <div class="produtos-carrossel">
-            <div class="produtos-wrapper">
-                <div class="produto">
-                    <img src="public/images/carro4.jpg" alt="Carrinho Premium Modelo 1">
-                    <h3>Carro Premium Modelo 1</h3>
-                    <p>R$ 2.499,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Premium Modelo 1!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro5.jpg" alt="Carrinho Premium Modelo 2">
-                    <h3>Carro Premium Modelo 2</h3>
-                    <p>R$ 2.799,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Premium Modelo 2!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro6.jpg" alt="Carrinho Premium Modelo 3">
-                    <h3>Carro Premium Modelo 3</h3>
-                    <p>R$ 3.199,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Premium Modelo 3!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="produtos-tematicos">
-        <h2>TEMÁTICOS</h2>
-        <div class="produtos-carrossel">
-            <div class="produtos-wrapper">
-                <div class="produto">
-                    <img src="public/images/carro7.jpg" alt="Carrinho Temático Modelo 1">
-                    <h3>Carro Temático Modelo 1</h3>
-                    <p>R$ 1.999,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Temático Modelo 1!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro8.jpg" alt="Carrinho Temático Modelo 2">
-                    <h3>Carro Temático Modelo 2</h3>
-                    <p>R$ 2.199,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Temático Modelo 2!" class="botao-whatsapp">Comprar via WhatsApp</a>
-                </div>
-                <div class="produto">
-                    <img src="public/images/carro9.jpg" alt="Carrinho Temático Modelo 3">
-                    <h3>Carro Temático Modelo 3</h3>
-                    <p>R$ 2.599,00</p>
-                    <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Carrinho Temático Modelo 3!" class="botao-whatsapp">Comprar via WhatsApp</a>
+                <!-- Modal com mais detalhes do produto 1 -->
+                <div id="modal-1" class="modal">
+                    <div class="modal-conteudo">
+                        <span class="fechar" onclick="fecharModal('modal-1')">&times;</span>
+                        <h2>Jeep Wrangler Rubicon 12V</h2>
+                        <div class="carrossel-imagens">
+                            <img src="public/images/carro1.jpg" alt="Jeep Wrangler Rubicon 12V - Foto 1">
+                            <img src="public/images/carro1-2.jpg" alt="Jeep Wrangler Rubicon 12V - Foto 2">
+                            <img src="public/images/carro1-3.jpg" alt="Jeep Wrangler Rubicon 12V - Foto 3">
+                        </div>
+                        <p><strong>Descrição:</strong> O Jeep Wrangler Rubicon 12V é perfeito para aventuras. Com design robusto e controle remoto, é ideal para crianças que adoram explorar.</p>
+                        <p><strong>Formas de Pagamento:</strong></p>
+                        <ul>
+                            <li>10X de R$ 299,00 sem juros</li>
+                            <li>À vista com 10% de desconto</li>
+                        </ul>
+                        <a href="https://wa.me/5588999999999?text=Olá, quero comprar o Jeep Wrangler Rubicon 12V!" class="botao-whatsapp">Comprar via WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </div>
