@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateBannerPosition() {
-    const offset = -currentIndex * bannerContainer.clientWidth;
-    bannerContainer.style.transform = `translateX(${offset}px)`;
+    const offset = -currentIndex * 100; // Agora funciona corretamente com %
+    bannerContainer.style.transform = `translateX(${offset}%)`;
 }
 
     // Deslizar automaticamente
