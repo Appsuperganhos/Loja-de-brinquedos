@@ -81,8 +81,8 @@ section {
 /* Estilo para o novo banner */
 #banner {
     width: 100%;
-    max-width: 1200px;
-    height: 400px;
+    max-width: 1000px;
+    height: 300px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -96,7 +96,7 @@ section {
 
 .banner-images img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
     display: block;
     flex: 1 0 100%;
@@ -145,12 +145,11 @@ footer {
 
 /* Animação de deslize do banner */
 @keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
+    0%, 33.33% { transform: translateX(0); }
+    36.33%, 66.66% { transform: translateX(-100%); }
+    69.66%, 100% { transform: translateX(-200%); }
 }
 
 .banner-images {
-    animation: slide 9s infinite ease-in-out;
+    animation: slide 12s infinite ease-in-out;
 }
