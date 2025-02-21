@@ -96,30 +96,59 @@ section {
     display: flex;
     transition: transform 1s ease-in-out;
     height: 100%;
+    width: 300%; /* Garante que todas as imagens cabem sem espaços */
 }
 
 .banner-images img {
-    width: 100%;
+    width: 100vw; /* Ocupa toda a largura da tela */
     height: 100%;
     object-fit: cover;
+    flex: 1 0 100vw; /* Garante que cada imagem ocupa exatamente 100vw */
 }
 
 .produtos-container {
     margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+}
+
+.produtos-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
 }
 
 .produto {
     background: white;
     padding: 20px;
-    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    min-width: 250px;
+    flex: 0 0 auto;
+    text-align: center;
 }
 
 .produto img {
     width: 100%;
     border-radius: 10px;
+}
+
+.produto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.produto p {
+    font-size: 14px;
+    color: #666;
+}
+
+.produto .preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d9534f;
+    margin: 5px 0;
 }
 
 .botao-whatsapp {
@@ -138,6 +167,29 @@ section {
     background-color: #1EBE5D;
 }
 
+/* Botões de navegação do carrossel */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -148,8 +200,8 @@ footer {
 /* Animação de deslize do banner */
 @keyframes slide {
     0%, 33.33% { transform: translateX(0); }
-    36.33%, 66.66% { transform: translateX(-100%); }
-    69.66%, 100% { transform: translateX(-200%); }
+    36.33%, 66.66% { transform: translateX(-100vw); }
+    69.66%, 100% { transform: translateX(-200vw); }
 }
 
 .banner-images {
