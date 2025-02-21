@@ -78,7 +78,7 @@ section {
     padding: 40px 20px;
 }
 
-/* Estilo para o banner responsivo */
+/* Estilo para o banner responsivo menor */
 #banner {
     width: 100%;
     max-width: 1280px;
@@ -97,7 +97,6 @@ section {
     transition: transform 1s ease-in-out;
     height: 100%;
     width: 300%; /* Garante que todas as imagens cabem sem espaços */
-    transform: translateX(0); /* Garante que inicia na imagem 1 */
 }
 
 .banner-images img {
@@ -147,7 +146,7 @@ footer {
     margin-top: 40px;
 }
 
-/* Animação de deslize do banner iniciando corretamente */
+/* Animação de deslize do banner */
 @keyframes slide {
     0%, 33.33% { transform: translateX(0); }
     36.33%, 66.66% { transform: translateX(-100vw); }
