@@ -81,8 +81,8 @@ section {
 /* Estilo para o banner responsivo menor */
 #banner {
     width: 100%;
-    max-width: 1280px; /* Ajuste para manter a proporção */
-    height: 200px; /* Reduz a altura do banner */
+    max-width: 1280px; 
+    height: 220px; /* Pequeno ajuste na altura */
     margin: 10px auto;
     overflow: hidden;
     position: relative;
@@ -93,14 +93,14 @@ section {
 
 .banner-images {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out;
     height: 100%;
 }
 
 .banner-images img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Mantém a imagem sem cortes */
+    object-fit: cover; /* Centraliza a imagem e mantém o foco */
 }
 
 .produtos-container {
