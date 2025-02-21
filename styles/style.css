@@ -20,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 /* Logo centralizada */
@@ -81,9 +82,9 @@ section {
 /* Estilo para o banner colado ao cabeçalho */
 #banner {
     width: 100%;
-    max-width: 1280px; 
-    height: 220px; /* Pequeno ajuste na altura */
-    margin: 0 auto; /* Remove qualquer margem para colar no cabeçalho */
+    max-width: 1280px;
+    height: 220px;
+    margin: 0 auto; /* Removendo espaço extra */
     overflow: hidden;
     position: relative;
     display: flex;
