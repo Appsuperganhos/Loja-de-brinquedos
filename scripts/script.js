@@ -5,27 +5,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const menuMain = document.querySelector(".menu-main");
 
-  menuToggle.addEventListener("click", function () {
-    menuMain.classList.toggle("active");
-  });
+  if (menuToggle && menuMain) {
+    menuToggle.addEventListener("click", function () {
+      menuMain.classList.toggle("active");
+    });
+  }
 
   // Toggle do submenu "Produtos"
   const produtosLink = document.querySelector(".menu-item-produtos > a");
   const submenu = document.querySelector(".submenu");
 
-  produtosLink.addEventListener("click", function (e) {
-    e.preventDefault();
-    submenu.classList.toggle("active");
-  });
+  if (produtosLink && submenu) {
+    produtosLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      submenu.classList.toggle("active");
+    });
+  }
 
   // Banner com deslize infinito (conforme o código original)
   const bannerContainer = document.querySelector(".banner-images");
-  let images = document.querySelectorAll("#banner .banner-images img");
+  let bannerImages = document.querySelectorAll("#banner .banner-images img");
   let currentIndex = 0;
-  const totalImages = images.length;
+  const totalImages = bannerImages.length;
 
-  const firstImageClone = images[0].cloneNode(true);
-  bannerContainer.appendChild(firstImageClone);
+  if (bannerImages.length > 0) {
+    const firstImageClone = bannerImages[0].cloneNode(true);
+    bannerContainer.appendChild(firstImageClone);
+  }
 
   function slideBanner() {
     currentIndex++;
@@ -42,6 +48,56 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(slideBanner, 4000);
+
+  // **** Geração dinâmica dos cartões na seção "TODOS OS ITENS" ****
+
+  // Seleciona o contêiner onde os produtos serão inseridos
+  const produtosWrapper = document.querySelector("#todos-itens .produtos-wrapper");
+  const totalProdutos = 37; // Total de cartões a serem gerados
+
+  for (let i = 1; i <= totalProdutos; i++) {
+    const produtoDiv = document.createElement("div");
+    produtoDiv.className = "produto";
+    let title, price, payment, description, images, whatsapp, altText;
+    
+    if (i === 1) {
+      // Primeiro produto com dados originais
+      title = "Jeep Wrangler Rubicon 12V";
+      price = "R$ 2.999,00";
+      payment = "10X de R$299,00 S/juros • Cartão, Pix e Boleto disponíveis";
+      description = "LINHA CLÁSSICA\nCARRINHO ELÉTRICO INFANTIL\nJIPE OFF ROAD 12V\nNOVO - COM GARANTIA\nPREÇO: 10x 299,00 S/JUROS\n\nINCLUI: Controle remoto e carregador\n\nBRINDES EXCLUSIVOS:\nCNH Infantil\nDocumento do carrinho\n\nESPECIFICAÇÕES:\nVoltagem: 12V\nAssento: 1\nTempo de carga: 8 a 12 horas\nCapacidade máxima: 40 kg\nMotores: 2 (4x2)\nVelocidade: 3 a 5 km/h\nVelocidades manuais: 1\nPortas que abrem: Sim\nBancos: Plástico\nPneus: Plástico\nCinto de segurança: Sim\nBuzina no volante: Sim\nSistema de som: Sim\n\n*Conectividade:*\nPen-drive: Sim\nCartão de memória: Não\nCabo Auxiliar: Não\nBluetooth: Sim\nLiga/Desliga: Botão start-stop\nPainel iluminado: Não\nFaróis: Sim\nLanternas: Não\n\nDIMENSÕES:\nAltura: 72 cm\nLargura: 61 cm\nComprimento: 100 cm";
+      images = "public/images/carro1.jpg,public/images/carro1_1.jpg,public/images/carro1_2.jpg,public/images/carro1_3.jpg,public/images/carro1_4.jpg,public/images/carro1_5.jpg";
+      whatsapp = "Olá, quero mais informações sobre o Jeep Wrangler Rubicon 12V!";
+      altText = "Jeep Wrangler Rubicon 12V";
+    } else {
+      // Produtos 2 até 37 com dados genéricos
+      title = "Produto " + i;
+      price = "R$ 2.999,00";
+      payment = "10X de R$299,00 S/juros • Cartão, Pix e Boleto disponíveis";
+      description = "LINHA CLÁSSICA\nCARRINHO ELÉTRICO INFANTIL\n" + title + "\nNOVO - COM GARANTIA\nPREÇO: 10x 299,00 S/JUROS\n\nINCLUI: Controle remoto e carregador\n\nBRINDES EXCLUSIVOS:\nCNH Infantil\nDocumento do carrinho\n\nESPECIFICAÇÕES:\nVoltagem: 12V\nAssento: 1\nTempo de carga: 8 a 12 horas\nCapacidade máxima: 40 kg\nMotores: 2 (4x2)\nVelocidade: 3 a 5 km/h\nVelocidades manuais: 1\nPortas que abrem: Sim\nBancos: Plástico\nPneus: Plástico\nCinto de segurança: Sim\nBuzina no volante: Sim\nSistema de som: Sim\n\n*Conectividade:*\nPen-drive: Sim\nCartão de memória: Não\nCabo Auxiliar: Não\nBluetooth: Sim\nLiga/Desliga: Botão start-stop\nPainel iluminado: Não\nFaróis: Sim\nLanternas: Não\n\nDIMENSÕES:\nAltura: 72 cm\nLargura: 61 cm\nComprimento: 100 cm";
+      images = "public/images/carro1.jpg,public/images/carro1_1.jpg,public/images/carro1_2.jpg,public/images/carro1_3.jpg,public/images/carro1_4.jpg,public/images/carro1_5.jpg";
+      whatsapp = "Olá, quero mais informações sobre o " + title + "!";
+      altText = title;
+    }
+    
+    // Define os atributos data- para uso no modal
+    produtoDiv.setAttribute("data-description", description);
+    produtoDiv.setAttribute("data-payment", payment);
+    produtoDiv.setAttribute("data-images", images);
+    produtoDiv.setAttribute("data-whatsapp", whatsapp);
+    
+    // Insere o conteúdo HTML do cartão
+    produtoDiv.innerHTML = `
+      <img src="public/images/carro1.jpg" alt="${altText}">
+      <h3>${title}</h3>
+      <p>${price}</p>
+      <p>${payment}</p>
+      <button class="btn-detalhes">Ver Detalhes</button>
+    `;
+    
+    // Adiciona o cartão ao contêiner
+    produtosWrapper.appendChild(produtoDiv);
+  }
 
   // Configuração do modal principal para detalhes dos produtos
   document.querySelectorAll(".btn-detalhes").forEach(button => {
@@ -120,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".btn-ver-descricao").addEventListener("click", function () {
     const modal = document.getElementById("product-modal");
     const description = modal.getAttribute("data-description") || "Descrição não disponível.";
-    // Converte quebras de linha (\n) em <br> para formatação
     const formattedDescription = description.replace(/\n/g, '<br>');
     const subModal = document.getElementById("description-modal");
     subModal.querySelector(".sub-modal-description").innerHTML = formattedDescription;
