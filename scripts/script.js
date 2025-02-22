@@ -20,28 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Banner com deslize infinito (conforme o código original)
   const bannerContainer = document.querySelector(".banner-images");
-// Selecione os links (que envolvem as imagens) em vez das imagens diretamente:
-let bannerLinks = document.querySelectorAll("#banner .banner-images a");
-let currentIndex = 0;
-const totalLinks = bannerLinks.length;
+  let images = document.querySelectorAll("#banner .banner-images img");
+  let currentIndex = 0;
+  const totalImages = images.length;
 
-// Clone o primeiro link (incluindo a imagem dentro dele)
-const firstLinkClone = bannerLinks[0].cloneNode(true);
-bannerContainer.appendChild(firstLinkClone);
+  const firstImageClone = images[0].cloneNode(true);
+  bannerContainer.appendChild(firstImageClone);
 
-function slideBanner() {
-  currentIndex++;
-  bannerContainer.style.transition = "transform 1s ease-in-out";
-  bannerContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  function slideBanner() {
+    currentIndex++;
+    bannerContainer.style.transition = "transform 1s ease-in-out";
+    bannerContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-  if (currentIndex === totalLinks) {
-    setTimeout(() => {
-      bannerContainer.style.transition = "none";
-      bannerContainer.style.transform = `translateX(0)`;
-      currentIndex = 0;
-    }, 1000);
+    if (currentIndex === totalImages) {
+      setTimeout(() => {
+        bannerContainer.style.transition = "none";
+        bannerContainer.style.transform = `translateX(0)`;
+        currentIndex = 0;
+      }, 1000);
+    }
   }
-}
 
   setInterval(slideBanner, 4000);
 
