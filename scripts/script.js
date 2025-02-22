@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.querySelector(".modal-payment").innerText = payment;
       // Armazena a descrição no modal para uso no sub modal
       modal.setAttribute("data-description", description);
-      modal.querySelector(".modal-whatsapp").setAttribute("href", `https://wa.me/5588999999999?text=${encodeURIComponent(whatsappMsg)}`);
+      modal.querySelector(".modal-whatsapp").setAttribute("href", `https://wa.me/5581994605476?text=${encodeURIComponent(whatsappMsg)}`);
 
       const carouselWrapper = modal.querySelector(".modal-carousel-wrapper");
       carouselWrapper.innerHTML = "";
