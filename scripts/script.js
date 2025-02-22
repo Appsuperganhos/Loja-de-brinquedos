@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submenu.classList.toggle("active");
   });
 
-  // Banner com deslize infinito (conforme o código original)
+  // Banner com deslize infinito (ajustado para desktop e mobile)
   const bannerContainer = document.querySelector(".banner-images");
   let images = document.querySelectorAll("#banner .banner-images img");
   let currentIndex = 0;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function slideBanner() {
     currentIndex++;
     bannerContainer.style.transition = "transform 1s ease-in-out";
-    bannerContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    bannerContainer.style.transform = `translateX(-${currentIndex * 100}vw)`;  // Ajuste para largura da tela
 
     if (currentIndex === totalImages) {
       setTimeout(() => {
