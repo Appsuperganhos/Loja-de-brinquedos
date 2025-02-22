@@ -47,6 +47,7 @@ nav {
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 .menu-toggle:hover {
   color: #ccc;
 }
@@ -56,12 +57,12 @@ nav {
   list-style: none;
   display: none;
   flex-direction: column;
-  background-color: #FFFFFF; /* Fundo branco */
+  background-color: #FFFFFF;
   position: absolute;
   top: 40px;
   left: 10px;
   padding: 10px 0;
-  border-radius: 5px; /* Bordas arredondadas */
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -73,9 +74,9 @@ nav {
 .submenu {
   list-style: none;
   margin-top: 5px;
-  padding: 5px 0; /* Ajusta o espaçamento interno */
-  background-color: #800080; /* Fundo roxo */
-  border-radius: 5px; /* Bordas arredondadas */
+  padding: 5px 0;
+  background-color: #800080;
+  border-radius: 5px;
   transform: translateY(-10px);
   opacity: 0;
   visibility: hidden;
@@ -88,31 +89,26 @@ nav {
   transform: translateY(0);
 }
 
-/* Itens do Submenu */
 .submenu li {
   padding: 8px 20px;
-  transition: background-color 0.3s ease;
 }
 
-/* Estilização dos links do submenu */
 .submenu li a {
-  color: white; /* Letras pretas */
+  color: white;
   text-decoration: none;
   display: block;
   padding: 10px 20px;
-  transition: background-color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse */
 .submenu li:hover {
-  background-color: #9932CC; /* Roxo mais claro ao passar o mouse */
+  background-color: #9932CC;
 }
 
 section {
   padding: 40px 20px;
 }
 
-/* Banner (mantido conforme o layout original) */
+/* Banner */
 #banner {
   width: 100%;
   max-width: 1280px;
@@ -166,7 +162,7 @@ section {
   border-radius: 10px;
 }
 
-/* Botão "Ver Detalhes" em roxo */
+/* Botão "Ver Detalhes" */
 .btn-detalhes {
   display: inline-block;
   background-color: #800080;
@@ -230,6 +226,7 @@ footer {
   color: black;
 }
 
+/* Carrossel do modal */
 .modal-carousel {
   position: relative;
   overflow: hidden;
@@ -279,7 +276,6 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Botão WhatsApp no modal (verde e centralizado) */
 .modal-whatsapp {
   display: block;
   width: fit-content;
@@ -298,7 +294,7 @@ footer {
   background-color: #1ebc59;
 }
 
-/* Estilo para o botão "Ver Descrição" */
+/* Botão "Ver Descrição" */
 .btn-ver-descricao {
   display: inline-block;
   background-color: #fff;
@@ -348,4 +344,39 @@ footer {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Media Queries para telas maiores (desktop) */
+@media (min-width: 1024px) {
+  /* Menu */
+  .menu-main {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: none; /* Esconde o menu hambúrguer */
+  }
+
+  /* Banner */
+  #banner {
+    height: 300px; /* Aumenta a altura do banner no desktop */
+  }
+
+  /* Carrossel de produtos */
+  .produtos-carrossel {
+    justify-content: center;
+  }
+
+  .produto {
+    width: 300px; /* Aumenta o tamanho dos produtos no desktop */
+  }
+
+  /* Modal */
+  .modal-content {
+    max-width: 800px;
+  }
 }
