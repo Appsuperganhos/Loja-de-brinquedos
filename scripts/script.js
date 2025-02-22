@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Script carregado!");
 
-  // Configuração do menu hambúrguer
+  // Configuração do menu hambúrguer (menu principal)
   const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector("nav ul");
+  const menuMain = document.querySelector(".menu-main");
 
   menuToggle.addEventListener("click", function () {
-    menu.classList.toggle("active");
+    menuMain.classList.toggle("active");
+  });
+
+  // Toggle do submenu "Produtos"
+  const produtosLink = document.querySelector(".menu-item-produtos > a");
+  const submenu = document.querySelector(".submenu");
+
+  produtosLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    submenu.classList.toggle("active");
   });
 
   // Banner com deslize infinito (conforme o código original)
