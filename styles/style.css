@@ -86,12 +86,15 @@ nav {
 .submenu {
   list-style: none;
   margin-top: 5px;
-  padding-left: 20px;
+  padding: 5px 0; /* Ajusta o espaçamento interno */
+  background-color: #800080; /* Fundo roxo */
+  border-radius: 5px; /* Bordas arredondadas para um visual mais elegante */
   transform: translateY(-10px);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .submenu.active {
   opacity: 1;
   visibility: visible;
@@ -103,8 +106,19 @@ nav {
   padding: 8px 20px;
   transition: background-color 0.3s ease;
 }
+
+/* Estilização dos links do submenu */
+.submenu li a {
+  color: white; /* Letras brancas */
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
 .submenu li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #9932CC; /* Roxo mais claro ao passar o mouse */
 }
 
 section {
