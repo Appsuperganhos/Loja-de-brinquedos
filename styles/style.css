@@ -14,18 +14,14 @@ body {
   padding: 0;
 }
 
-/* Cabeçalho com fundo roxo e logo centralizada */
+/* Cabeçalho com fundo azul e logo centralizada */
 header {
   background-color: #4B0082;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
 .header-logo img {
@@ -278,7 +274,7 @@ footer {
   background-color: #1ebc59;
 }
 
-/* Botão "Ver Descrição" */
+/* Estilo para o botão "Ver Descrição" */
 .btn-ver-descricao {
   display: inline-block;
   background-color: #fff;
