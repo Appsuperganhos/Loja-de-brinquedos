@@ -87,7 +87,7 @@ nav {
   list-style: none;
   margin-top: 5px;
   padding: 5px 0; /* Ajusta o espaçamento interno */
-  background-color: #800080; /* Fundo roxo */
+  background-color: white; /* Fundo branco */
   border-radius: 5px; /* Bordas arredondadas para um visual mais elegante */
   transform: translateY(-10px);
   opacity: 0;
@@ -109,7 +109,7 @@ nav {
 
 /* Estilização dos links do submenu */
 .submenu li a {
-  color: white; /* Letras brancas */
+  color: #800080; /* Letras roxas */
   text-decoration: none;
   display: block;
   padding: 10px 20px;
@@ -118,7 +118,7 @@ nav {
 
 /* Efeito ao passar o mouse */
 .submenu li:hover {
-  background-color: #9932CC; /* Roxo mais claro ao passar o mouse */
+  background-color: #f0f0f0; /* Cinza claro ao passar o mouse */
 }
 
 section {
