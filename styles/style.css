@@ -56,7 +56,7 @@ nav {
   list-style: none;
   display: none;
   flex-direction: column;
-  background-color: #800080; /* Fundo roxo */
+  background-color: #FFFFFF; /* Fundo branco */
   position: absolute;
   top: 40px;
   left: 10px;
