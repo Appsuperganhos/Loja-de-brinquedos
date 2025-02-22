@@ -14,8 +14,15 @@
     </div>
     <nav>
       <button class="menu-toggle">☰</button>
-      <ul>
-        <li><a href="#produtos">Produtos</a></li>
+      <ul class="menu-main">
+        <li class="menu-item-produtos">
+          <a href="#">Produtos</a>
+          <ul class="submenu">
+            <li><a href="#produtos">LINHA CLÁSSICA</a></li>
+            <li><a href="#produtos-premium">LINHA PREMIUM</a></li>
+            <li><a href="#produtos-tematicos">TEMÁTICOS</a></li>
+          </ul>
+        </li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -35,12 +42,12 @@
     <p>Confira nossa coleção de carrinhos elétricos para crianças.</p>
   </section>
 
-  <!-- LINHA CLÁSSICA -->
-  <section id="produtos">
-    <h2>LINHA CLÁSSICA</h2>
+  <!-- NOVA SEÇÃO: TODOS OS ITENS -->
+  <section id="todos-itens">
+    <h2>TODOS OS ITENS</h2>
     <div class="produtos-carrossel">
       <div class="produtos-wrapper">
-        <!-- Primeiro produto com 10 imagens no modal -->
+        <!-- Primeiro produto (copiado da LINHA CLÁSSICA) -->
         <div class="produto"
              data-description="LINHA CLÁSSICA
 CARRINHO ELÉTRICO INFANTIL
@@ -92,14 +99,76 @@ Comprimento: 100 cm"
           <p>10X de R$ 299,00 S/juros</p>
           <button class="btn-detalhes">Ver Detalhes</button>
         </div>
-        <!-- Demais produtos -->
+        <!-- Copie aqui os demais produtos desejados para "TODOS OS ITENS" -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LINHA CLÁSSICA -->
+  <section id="produtos">
+    <h2>LINHA CLÁSSICA</h2>
+    <div class="produtos-carrossel">
+      <div class="produtos-wrapper">
+        <!-- Primeiro produto -->
+        <div class="produto"
+             data-description="LINHA CLÁSSICA
+CARRINHO ELÉTRICO INFANTIL
+JIPE OFF ROAD 12V
+NOVO - COM GARANTIA
+PREÇO: 10x 299,00 S/JUROS
+
+INCLUI: Controle remoto e carregador
+
+BRINDES EXCLUSIVOS:
+CNH Infantil
+Documento do carrinho
+
+ESPECIFICAÇÕES:
+Voltagem: 12V
+Assento: 1
+Tempo de carga: 8 a 12 horas
+Capacidade máxima: 40 kg
+Motores: 2 (4x2)
+Velocidade: 3 a 5 km/h
+Velocidades manuais: 1
+Portas que abrem: Sim
+Bancos: Plástico
+Pneus: Plástico
+Cinto de segurança: Sim
+Buzina no volante: Sim
+Sistema de som: Sim
+
+*Conectividade:*
+Pen-drive: Sim
+Cartão de memória: Não
+Cabo Auxiliar: Não
+Bluetooth: Sim
+Liga/Desliga: Botão start-stop
+Painel iluminado: Não
+Faróis: Sim
+Lanternas: Não
+
+DIMENSÕES:
+Altura: 72 cm
+Largura: 61 cm
+Comprimento: 100 cm"
+             data-payment="10X de R$299 S/juros • Cartão, Pix e Boleto disponíveis"
+             data-images="public/images/carro1.jpg,public/images/carro1_1.jpg,public/images/carro1_2.jpg,public/images/carro1_3.jpg,public/images/carro1_4.jpg,public/images/carro1_5.jpg"
+             data-whatsapp="Olá, quero mais informações sobre o Jeep Wrangler Rubicon 12V!">
+          <img src="public/images/carro1.jpg" alt="Jeep Wrangler Rubicon 12V">
+          <h3>Jeep Wrangler Rubicon 12V</h3>
+          <p>R$ 2.999,00</p>
+          <p>10X de R$ 299,00 S/juros</p>
+          <button class="btn-detalhes">Ver Detalhes</button>
+        </div>
+        <!-- Demais produtos da LINHA CLÁSSICA -->
         <div class="produto"
              data-description="LINHA CLÁSSICA
 
 CARRINHO ELÉTRICO INFANTIL
 
 PORSCHE 6V
-NOVO-COM GARANTΙΑ
+NOVO-COM GARANTIA
 PREÇO: 10x de 219,00 S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -154,7 +223,7 @@ Comprimento: 100 cm"
 CARRINHO ELÉTRICO INFANTIL
 
 PORSCHE 6V
-NOVO-COM GARANTΙΑ
+NOVO-COM GARANTIA
 PREÇO: 10x de 219,00 S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -245,7 +314,6 @@ Buzina no volante: Sim
 Sistema de som: Sim
 
 Conectividade:*
-
 Pen-drive: Sim
 Cartão de memória: Sim
 Cabo Auxiliar: Sim
@@ -256,7 +324,6 @@ Faróis: Sim
 Lanternas: Não
 
 DIMENSÕES:
-
 Altura: 48 cm
 Largura: 61 cm
 Comprimento: 100 cm"
@@ -275,7 +342,7 @@ Comprimento: 100 cm"
 CARRINHO ELÉTRICO INFANTIL
 
 MINI UTV 12V
-NOVO COM GARANTΙΑ
+NOVO COM GARANTIA
 PREÇO: 10x 449,00 S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -301,7 +368,6 @@ Buzina no volante: Sim
 Sistema de som: Sim
 
 *Conectividade*
-
 Pen-drive: Não
 Cartão de memória: Não
 Cabo Auxiliar. Não
@@ -312,7 +378,6 @@ Faróis: Sim
 Lanternas: Sim
 
 DIMENSÕES:
-
 Altura: 85 cm
 Largura: 85 cm
 Comprimento: 124 cm"
@@ -331,7 +396,7 @@ Comprimento: 124 cm"
 CARRINHO ELÉTRICO INFANTIL
 
 BMW Z4 12V
-NOVO-COM GARANΤΙΑ
+NOVO-COM GARANТIA
 PREÇO: R$ 2.499,00 em 10x S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -357,7 +422,6 @@ Buzina no volante: Sim
 Sistema de som: Sim
 
 *Conectividade*
-
 Pen-drive: Não
 Cartão de memória: Não
 Cabo Auxiliar. Não
@@ -368,7 +432,6 @@ Faróis: Sim
 Lanternas: Não
 
 DIMENSÕES:
-
 Altura: 46 cm
 Largura: 56 cm
 Comprimento: 108 cm"
@@ -396,7 +459,7 @@ Comprimento: 108 cm"
 CARRINHO ELÉTRICO INFANTIL
 
 MASERATI 12V
-NOVO-COM GARANTΙΑ
+NOVO-COM GARANТIA
 PREÇO: 10x de 239,00 S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -422,7 +485,6 @@ Buzina no volante: Sim
 Sistema de som: Sim
 
 *Conectividade*
-
 Pen-drive: Sim
 Cartão de memória: Não
 Cabo Auxiliar. Não
@@ -433,7 +495,6 @@ Faróis: Sim
 Lanternas: Não
 
 DIMENSÕES:
-
 Altura: 46 cm
 Largura: 56 cm
 Comprimento: 108 cm"
@@ -452,7 +513,7 @@ Comprimento: 108 cm"
 CARRINHO ELÉTRICO INFANTIL
 
 FUSCA NEW BEETLE 12V
-NOVO-COM GARANΤΙΑ
+NOVO-COM GARANТIA
 PREÇO: 10x de 219,00 S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -480,7 +541,6 @@ Buzina no volante: Sim
 Sistema de som: Sim
 
 Conectividade:*
-
 Pen-drive: Sim
 Cartão de memória: Não
 Cabo Auxiliar: Sim
@@ -491,7 +551,6 @@ Faróis: Sim
 Lanternas: Não
 
 DIMENSÕES:
-
 Altura: 48 cm
 Largura: 61 cm
 Comprimento: 100 cm"
@@ -510,7 +569,7 @@ Comprimento: 100 cm"
 CARRINHO ELÉTRICO INFANTIL
 
 UTV 4x4 12V
-NOVO-COM GARANTΙΑ
+NOVO-COM GARANТIA
 PREÇO: R$5.499 em 10x S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -537,7 +596,6 @@ Buzina no volante: Sim
 Sistema de som: Sim
 
 Conectividade:*
-
 Pen-drive: Sim
 Cartão de memória: não
 Cabo Auxiliar: Sim
@@ -548,7 +606,6 @@ Faróis: Sim
 Lanternas: Não
 
 DIMENSÕES:
-
 Altura: cm
 Largura: cm
 Comprimento: cm"
