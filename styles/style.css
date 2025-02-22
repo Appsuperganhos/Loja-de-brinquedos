@@ -96,7 +96,7 @@ nav {
 
 /* Estilização dos links do submenu */
 .submenu li a {
-  color: black; /* Letras pretas */
+  color: white; /* Letras pretas */
   text-decoration: none;
   display: block;
   padding: 10px 20px;
