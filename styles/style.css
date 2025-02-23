@@ -157,37 +157,9 @@ section {
   text-align: center;
 }
 
-/* Efeito de alternância de imagens no cartão */
-/* Atualize o HTML do cartão para envolver as imagens em um container com a classe "produto-img" */
-.produto-img {
-  position: relative;
+.produto img {
   width: 100%;
-  overflow: hidden;
-}
-
-.produto-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: opacity 2s ease-in-out;
-}
-
-.produto-img img.img1 {
-  opacity: 1;
-  animation: fadeEffect 10s infinite;
-}
-
-.produto-img img.img2 {
-  opacity: 0;
-  animation: fadeEffect 10s infinite;
-  animation-delay: 5s;
-}
-
-@keyframes fadeEffect {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+  border-radius: 10px;
 }
 
 /* Botão "Ver Detalhes" */
@@ -408,3 +380,4 @@ footer {
     max-width: 800px;
   }
 }
+,
