@@ -155,11 +155,15 @@ section {
   flex-shrink: 0;
   width: 250px;
   text-align: center;
-  position: relative; /* Necessário para sobrepor a 2ª imagem */
+  position: relative; /* Para sobrepor a 2ª imagem */
 }
 
-/* Efeito de alternância de imagens no cartão */
-/* Para aplicar, adicione uma segunda imagem com a classe "img2" logo após a imagem original com a classe "img1". */
+/* Container para as imagens do produto */
+.produto-img {
+  position: relative;
+}
+
+/* Estilo da imagem original */
 .produto img.img1 {
   display: block;
   width: 100%;
@@ -167,7 +171,9 @@ section {
   animation: fadeEffect 10s infinite;
 }
 
+/* Estilo da segunda imagem - igual à original */
 .produto img.img2 {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
