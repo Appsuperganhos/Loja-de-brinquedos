@@ -155,8 +155,38 @@ section {
   flex-shrink: 0;
   width: 250px;
   text-align: center;
+  position: relative; /* Necessário para sobrepor a 2ª imagem */
 }
 
+/* Efeito de alternância de imagens no cartão */
+/* Para aplicar, adicione uma segunda imagem com a classe "img2" logo após a imagem original com a classe "img1". */
+.produto img.img1 {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  animation: fadeEffect 10s infinite;
+}
+
+.produto img.img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeEffect 10s infinite;
+  animation-delay: 5s;
+}
+
+@keyframes fadeEffect {
+  0% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  90% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Caso não sejam utilizadas as classes "img1" e "img2", a regra abaixo garante a formatação padrão */
 .produto img {
   width: 100%;
   border-radius: 10px;
@@ -380,4 +410,3 @@ footer {
     max-width: 800px;
   }
 }
-,
