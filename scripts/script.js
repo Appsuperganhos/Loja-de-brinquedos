@@ -3,15 +3,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Configuração do menu hambúrguer (menu principal)
   const menuToggle = document.querySelector(".menu-toggle");
-const sidebar = document.querySelector(".sidebar");
+  const sidebar = document.querySelector(".sidebar");
 
-menuToggle.addEventListener("click", function() {
-  sidebar.classList.toggle("active");
-});
+  menuToggle.addEventListener("click", function() {
+    sidebar.classList.toggle("active");
+  });
 
-  // Toggle do submenu "Produtos"
+  // Configuração do botão FECHAR no sidebar
+  const closeMenu = document.querySelector(".close-menu");
+  closeMenu.addEventListener("click", function(e) {
+    e.preventDefault();
+    sidebar.classList.remove("active");
+  });
+
+  // Toggle do submenu "Produtos" no sidebar
   const produtosLink = document.querySelector(".menu-item-produtos > a");
-  const submenu = document.querySelector(".submenu");
+  const submenu = document.querySelector(".submenu-sidebar");
 
   produtosLink.addEventListener("click", function (e) {
     e.preventDefault();
@@ -30,7 +37,7 @@ menuToggle.addEventListener("click", function() {
   function slideBanner() {
     currentIndex++;
     bannerContainer.style.transition = "transform 1s ease-in-out";
-    bannerContainer.style.transform = `translateX(-${currentIndex * 100}vw)`;  // Ajuste para largura da tela
+    bannerContainer.style.transform = `translateX(-${currentIndex * 100}vw)`;
 
     if (currentIndex === totalImages) {
       setTimeout(() => {
@@ -120,7 +127,6 @@ menuToggle.addEventListener("click", function() {
   document.querySelector(".btn-ver-descricao").addEventListener("click", function () {
     const modal = document.getElementById("product-modal");
     const description = modal.getAttribute("data-description") || "Descrição não disponível.";
-    // Converte quebras de linha (\n) em <br> para formatação
     const formattedDescription = description.replace(/\n/g, '<br>');
     const subModal = document.getElementById("description-modal");
     subModal.querySelector(".sub-modal-description").innerHTML = formattedDescription;
