@@ -153,6 +153,36 @@ nav {
   vertical-align: middle;
 }
 
+/* Nova parte: Sidebar Logo */
+.sidebar-logo {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-logo img {
+  width: 100px; /* ajuste conforme necessário */
+  height: auto;
+}
+
+/* Nova parte: Submenu Sidebar para "PRODUTOS" */
+.submenu-sidebar {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+
+.submenu-sidebar.active {
+  display: block;
+}
+
+.submenu-sidebar li a {
+  font-size: 16px;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
 /* Seções */
 section {
   padding: 40px 20px;
