@@ -52,7 +52,7 @@ nav {
   color: #ccc;
 }
 
-/* Menu Principal */
+/* Menu Principal (antigo, não utilizado na nova versão) */
 .menu-main {
   list-style: none;
   display: none;
@@ -70,7 +70,7 @@ nav {
   display: flex;
 }
 
-/* Submenu */
+/* Submenu (antigo, não utilizado na nova versão) */
 .submenu {
   list-style: none;
   margin-top: 5px;
@@ -104,6 +104,54 @@ nav {
   background-color: #9932CC;
 }
 
+/* Sidebar - novo menu lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Escondido inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #4B0082;
+  padding-top: 60px; /* Espaço para não ficar colado ao topo */
+  transition: left 0.3s ease;
+  z-index: 100;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #800080;
+}
+
+.menu-icon {
+  margin-right: 10px;
+  fill: white;
+}
+
+/* Seções */
 section {
   padding: 40px 20px;
 }
@@ -192,7 +240,7 @@ section {
   100% { opacity: 1; }
 }
 
-/* Caso não sejam utilizadas as classes "img1" e "img2", a regra abaixo garante a formatação padrão */
+/* Regra padrão para imagens caso não sejam usadas as classes img1 e img2 */
 .produto img {
   width: 100%;
   border-radius: 10px;
@@ -384,7 +432,7 @@ footer {
 
 /* Media Queries para telas maiores (desktop) */
 @media (min-width: 1024px) {
-  /* Menu */
+  /* Menu antigo */
   .menu-main {
     display: flex;
     position: relative;
