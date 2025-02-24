@@ -12,76 +12,75 @@
     <div class="header-logo">
       <img src="public/images/logo.png" alt="Logo v12 kids">
     </div>
-    <header>
-  <nav>
-    <button class="menu-toggle">☰</button>
-  </nav>
+    <nav>
+      <button class="menu-toggle">☰</button>
+      <!-- Removemos o menu antigo para usar o novo sidebar -->
+    </nav>
+    <!-- Novo Sidebar com as opções solicitadas -->
+    <div class="sidebar">
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#produtos">
+            <!-- Ícone para PRODUTOS -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4a2 2 0 001-1.73z"/>
+              <polyline points="3.27 6.96 12 12 20.73 6.96"/>
+              <line x1="12" y1="22" x2="12" y2="12"/>
+            </svg>
+            PRODUTOS
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com" target="_blank">
+            <!-- Ícone para INSTAGRAM -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37a4 4 0 11-4.63-4.63"/>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+            </svg>
+            INSTAGRAM
+          </a>
+        </li>
+        <li>
+          <a href="#suporte">
+            <!-- Ícone para SUPORTE -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+              <path d="M2 12v6a2 2 0 002 2h3v-8H2zM17 20h3a2 2 0 002-2v-6h-5zM5 10a7 7 0 0114 0v2a7 7 0 01-14 0V10z"/>
+            </svg>
+            SUPORTE
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
-  <!-- Sidebar: menu lateral que desliza a partir da esquerda -->
-  <div class="sidebar">
-    <ul class="sidebar-menu">
-      <li>
-        <a href="#produtos">
-          <!-- Ícone para PRODUTOS -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4a2 2 0 001-1.73z"/>
-            <polyline points="3.27 6.96 12 12 20.73 6.96"/>
-            <line x1="12" y1="22" x2="12" y2="12"/>
-          </svg>
-          PRODUTOS
-        </a>
-      </li>
-      <li>
-        <a href="https://instagram.com" target="_blank">
-          <!-- Ícone para INSTAGRAM -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37a4 4 0 11-4.63-4.63"/>
-            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
-          </svg>
-          INSTAGRAM
-        </a>
-      </li>
-      <li>
-        <a href="#suporte">
-          <!-- Ícone para SUPORTE -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M2 12v6a2 2 0 002 2h3v-8H2zM17 20h3a2 2 0 002-2v-6h-5zM5 10a7 7 0 0114 0v2a7 7 0 01-14 0V10z"/>
-          </svg>
-          SUPORTE
-        </a>
-      </li>
-    </ul>
-  </div>
-</header>
+  <!-- Banner (mantido conforme o layout original) -->
+  <section id="banner">
+    <div class="banner-images">
+      <img src="public/images/banner1.jpg" alt="Promoção 1">
+      <img src="public/images/banner2.jpg" alt="Promoção 2">
+      <img src="public/images/banner3.jpg" alt="Promoção 3">
+    </div>
+  </section>
 
-<!-- Banner (mantido conforme o layout original) -->
-<section id="banner">
-  <div class="banner-images">
-    <img src="public/images/banner1.jpg" alt="Promoção 1">
-    <img src="public/images/banner2.jpg" alt="Promoção 2">
-    <img src="public/images/banner3.jpg" alt="Promoção 3">
-  </div>
-</section>
-
-<section id="home">
-  <h2>Bem-vindo à v12 kids!</h2>
-  <p>Confira nossa coleção de carrinhos elétricos para crianças.</p>
-</section>
+  <section id="home">
+    <h2>Bem-vindo à v12 kids!</h2>
+    <p>Confira nossa coleção de carrinhos elétricos para crianças.</p>
+  </section>
 
   <!-- NOVA SEÇÃO: TODOS OS ITENS -->
-<section id="todos-itens">
-  <h2>TODOS OS ITENS</h2>
-  <div class="produtos-carrossel">
-    <div class="produtos-wrapper">
-      <!-- Produto 0 (original) -->
-      <div class="produto"
-           data-description="LINHA PREMIUM
+  <section id="todos-itens">
+    <h2>TODOS OS ITENS</h2>
+    <div class="produtos-carrossel">
+      <div class="produtos-wrapper">
+        <!-- Produto 0 (original) -->
+        <div class="produto"
+             data-description="LINHA PREMIUM
 
 CARRINHO ELÉTRICO INFANTIL
 
 UTV 4x2 12V COM DUAS CORES EXCLUSIVAS!
-NOVO-COM GARANΤΙΑ
+NOVO-COM GARANNTIA
 PREÇO: R$5.499 em 10x S/JUROS
 
 INCLUI: Controle remoto e carregador
@@ -143,18 +142,18 @@ DIMENSÕES:
 Altura: 84cm
 Largura: 86cm
 Comprimento: 144cm"
-           data-payment="10X de R$299 S/juros • Cartão, Pix e Boleto disponíveis"
-           data-images="public/images/carro0_2.jpg,public/images/carro0_1.jpg,public/images/carro0.jpg"
-           data-whatsapp="Olá, quero mais informações sobre o UTX 4X2!!">
-  <div class="produto-img">
-    <img class="img1" src="public/images/carro0.jpg" alt="UTX 4X2">
-    <img class="img2" src="public/images/carro0_2.jpg" alt="UTX 4X2">
-  </div>
-  <h3>UTV 4X2</h3>
-  <p>R$ 5.500,00</p>
-  <p>10X de R$ 550,00 S/juros</p>
-  <button class="btn-detalhes">Ver Detalhes</button>
-</div>
+             data-payment="10X de R$299 S/juros • Cartão, Pix e Boleto disponíveis"
+             data-images="public/images/carro0_2.jpg,public/images/carro0_1.jpg,public/images/carro0.jpg"
+             data-whatsapp="Olá, quero mais informações sobre o UTX 4X2!!">
+          <div class="produto-img">
+            <img class="img1" src="public/images/carro0.jpg" alt="UTX 4X2">
+            <img class="img2" src="public/images/carro0_2.jpg" alt="UTX 4X2">
+          </div>
+          <h3>UTV 4X2</h3>
+          <p>R$ 5.500,00</p>
+          <p>10X de R$ 550,00 S/juros</p>
+          <button class="btn-detalhes">Ver Detalhes</button>
+        </div>
       <!-- Produto 2 (original) -->
       <div class="produto"
            data-description="LINHA PREMIUM
