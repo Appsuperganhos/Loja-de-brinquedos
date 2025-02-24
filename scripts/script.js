@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Configuração do menu hambúrguer (menu principal)
   const menuToggle = document.querySelector(".menu-toggle");
-  const menuMain = document.querySelector(".menu-main");
+const sidebar = document.querySelector(".sidebar");
 
-  menuToggle.addEventListener("click", function () {
-    menuMain.classList.toggle("active");
-  });
+menuToggle.addEventListener("click", function() {
+  sidebar.classList.toggle("active");
+});
 
   // Toggle do submenu "Produtos"
   const produtosLink = document.querySelector(".menu-item-produtos > a");
