@@ -12,35 +12,62 @@
     <div class="header-logo">
       <img src="public/images/logo.png" alt="Logo v12 kids">
     </div>
-    <nav>
-      <button class="menu-toggle">☰</button>
-      <ul class="menu-main">
-        <li class="menu-item-produtos">
-          <a href="#">Produtos</a>
-          <ul class="submenu">
-            <li><a href="#produtos">LINHA CLÁSSICA</a></li>
-            <li><a href="#produtos-premium">LINHA PREMIUM</a></li>
-            <li><a href="#produtos-tematicos">TEMÁTICOS</a></li>
-          </ul>
-        </li>
-        <li><a href="https://wa.me/5581994605476?text=Olá,%20gostaria%20de%20mais%20informações" target="_blank">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+  <nav>
+    <button class="menu-toggle">☰</button>
+  </nav>
 
-  <!-- Banner (mantido conforme o layout original) -->
-  <section id="banner">
-    <div class="banner-images">
-      <img src="public/images/banner1.jpg" alt="Promoção 1">
-      <img src="public/images/banner2.jpg" alt="Promoção 2">
-      <img src="public/images/banner3.jpg" alt="Promoção 3">
-    </div>
-  </section>
+  <!-- Sidebar: menu lateral que desliza a partir da esquerda -->
+  <div class="sidebar">
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#produtos">
+          <!-- Ícone para PRODUTOS -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4a2 2 0 001-1.73z"/>
+            <polyline points="3.27 6.96 12 12 20.73 6.96"/>
+            <line x1="12" y1="22" x2="12" y2="12"/>
+          </svg>
+          PRODUTOS
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com" target="_blank">
+          <!-- Ícone para INSTAGRAM -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37a4 4 0 11-4.63-4.63"/>
+            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+          </svg>
+          INSTAGRAM
+        </a>
+      </li>
+      <li>
+        <a href="#suporte">
+          <!-- Ícone para SUPORTE -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2 12v6a2 2 0 002 2h3v-8H2zM17 20h3a2 2 0 002-2v-6h-5zM5 10a7 7 0 0114 0v2a7 7 0 01-14 0V10z"/>
+          </svg>
+          SUPORTE
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
 
-  <section id="home">
-    <h2>Bem-vindo à v12 kids!</h2>
-    <p>Confira nossa coleção de carrinhos elétricos para crianças.</p>
-  </section>
+<!-- Banner (mantido conforme o layout original) -->
+<section id="banner">
+  <div class="banner-images">
+    <img src="public/images/banner1.jpg" alt="Promoção 1">
+    <img src="public/images/banner2.jpg" alt="Promoção 2">
+    <img src="public/images/banner3.jpg" alt="Promoção 3">
+  </div>
+</section>
+
+<section id="home">
+  <h2>Bem-vindo à v12 kids!</h2>
+  <p>Confira nossa coleção de carrinhos elétricos para crianças.</p>
+</section>
 
   <!-- NOVA SEÇÃO: TODOS OS ITENS -->
 <section id="todos-itens">
